@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 import './Modal.css';
 
 const Modal = ({ show, onClose, title, message }) => {
@@ -24,3 +24,12 @@ const Modal = ({ show, onClose, title, message }) => {
 };
 
 export default Modal;
+
+
+// Definir los tipos de las props
+Modal.propTypes = {
+  show: PropTypes.bool.isRequired,     // show debe ser un booleano y es requerido
+  onClose: PropTypes.func.isRequired,  // onClose debe ser una función y es requerido
+  title: PropTypes.string.isRequired,  // title debe ser un string y es requerido
+  message: PropTypes.string.isRequired // message debe ser un string y es requerido
+};

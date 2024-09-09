@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
-import './Modal.css';
 
+import './Modal.css';
 
 const Modal = ({ show, onClose, title, message }) => {
 
@@ -8,7 +7,7 @@ const Modal = ({ show, onClose, title, message }) => {
     return null;
   }
   return (
-    <div className="modal-overlay" onClick={onClose}>
+    <div className="modal-overlay" onClick={onClose}> 
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <h1 className='title-modal'>{title}</h1>
        

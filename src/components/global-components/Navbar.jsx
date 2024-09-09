@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import { useCallback } from 'react';
 import { useAuth } from '../../pages/login/login-context/AuthContext.jsx';
 import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css';

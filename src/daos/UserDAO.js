@@ -1,10 +1,14 @@
 import { db } from '../../firebase.config';
 import { doc, setDoc, getDoc } from 'firebase/firestore';
 
+
+
+
+//se utiliza para gestionar la creación y verificación de usuarios en la base de datos Firestore de Firebase.
 const checkAndCreateUser = async (user) => {
   try {
     const userDocRef = doc(db, 'users', user.email); // Usa el email como ID del documento
-    const userDoc = await getDoc(userDocRef);
+    const userDoc = await getDoc(userDocRef); // Verifica si el usuario ya existe en Firestore
 
     if (userDoc.exists()) {
       // Si el documento existe, el usuario ya está creado
